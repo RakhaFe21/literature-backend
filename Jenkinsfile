@@ -39,7 +39,7 @@ pipeline {
                 sshagent([credential]) {
                     sh '''ssh -o StrictHostKeyChecking=no ${server} << EOF 
                     cd ${directory}
-                    docker run --name test_fe -p 5000:5000 -d ${image}:latest
+                    docker run --name test_be -p 5000:5000 -d ${image}:latest
                     curl localhost:5000
                     docker stop test_be
                     docker rm test_be
