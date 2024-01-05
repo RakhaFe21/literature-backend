@@ -72,7 +72,7 @@ Testing:
 
   script : 
     - ssh $VAR_USER@$VAR_IP "cd $VAR_DIREKTORI"
-    - ssh $VAR_USER@$VAR_IP "wget --spider localhost:5000"
+    - ssh $VAR_USER@$VAR_IP "curl localhost:5000"
     - echo "testing application success!"
 
 Push image to registry:
