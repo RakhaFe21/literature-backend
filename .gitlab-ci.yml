@@ -51,7 +51,7 @@ Dockerize:
   script : 
     - ssh $VAR_USER@$VAR_IP "cd $VAR_DIREKTORI" 
     - ssh $VAR_USER@$VAR_IP "docker compose up -d database"
-    - ssh $VAR_USER@$VAR_IP "docker build -t $VAR_IMAGE ."
+    - ssh $VAR_USER@$VAR_IP "cd $VAR_DIREKTORI && docker build -t $VAR_IMAGE ."
     - ssh $VAR_USER@$VAR_IP "docker compose up -d && exit "
     - echo "building application success!"
 
